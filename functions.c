@@ -33,7 +33,7 @@ int print_char(va_list types, char buffer[],
  */
 
 int print_string(va_list types, char buffer[], int flags, int width,
-int precision, int size)
+	int precision, int size)
 {
 	int length = 0, i;
 	char *str = va_arg(types, char *);
@@ -146,8 +146,7 @@ int print_int(va_list types, char buffer[],
 	}
 
 	i++;
-	return (write_number
-		(is_negative, i, buffer, flags, width, precision, size));
+	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
 
 /************************* PRINT BINARY *************************/
